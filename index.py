@@ -28,6 +28,11 @@ except FileNotFoundError:
     print("email.txt veya pass.txt dosyaları bulunamadı.")
     exit()
 
+# email ve şifreden yeni satır karakterlerini sil
+email = email.replace("\r", "").replace("\n", "")
+password = password.replace("\r", "").replace("\n", "")
+
+
 # ana sayfaya git
 driver.get("https://ubs.etu.edu.tr/")
 
@@ -37,12 +42,15 @@ login_button = wait.until(
     EC.visibility_of_element_located((By.ID, "btnLogin")))
 
 # giriş yap
-username_field = driver.find_element_by_id("txtLogin")
-password_field = driver.find_element_by_id("txtPassword")
+
+
+username_field = driver.find_element("id", "txtLogin")
 username_field.send_keys(email)
+password_field = driver.find_element("id", "txtPassword")
 password_field.send_keys(password)
 
 # giriş yap butonuna tıkla
+login_button = driver.find_element("id", "btnLogin")
 login_button.click()
 
 # okulun logosunun görünmesini bekle

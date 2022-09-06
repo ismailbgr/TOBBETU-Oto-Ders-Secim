@@ -7,9 +7,9 @@ Bu sayede çöken sistemden dolayı ders seçim ekranına ulaşmak için sürekl
 
 ## Kullanım
 
-- Programı Çalıştırmadan Önce email.txt ve password.txt dosyalarını düzenlemeniz gerekmektedir.
+- Programı Çalıştırmadan Önce email.txt ve pass.txt dosyalarını düzenlemeniz gerekmektedir.
 
-  - email.txt dosyasına TOBB ETÜ mail adresinizi, password.txt dosyasına da şifrenizi yazmanız gerekmektedir.
+  - email.txt dosyasına TOBB ETÜ mail adresinizi, pass.txt dosyasına da şifrenizi yazmanız gerekmektedir.
 
 - programı ```python3 index.py``` komutu ile çalıştırabilirsiniz.
 
